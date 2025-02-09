@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Merge and Remove Duplicates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Merge Two Arrays and Remove Duplicates</h2>
+
+    <p id="result"></p>
+
+    <button onclick="mergeArrays()">Merge and Remove Duplicates</button>
+
+    <script>
+        function mergeArrays() {
+            // Two example arrays
+            let array1 = [1, 2, 3, 4, 5];
+            let array2 = [4, 5, 6, 7, 8];
+
+            // Merging arrays
+            let mergedArray = array1.concat(array2);
+
+            // Removing duplicates using Set
+            let uniqueArray = [...new Set(mergedArray)];
+
+            // Displaying the result
+            document.getElementById("result").innerText = "Merged Array without duplicates: " + uniqueArray.join(", ");
+        }
+    </script>
+
+</body>
+</html>
